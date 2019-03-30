@@ -1,0 +1,110 @@
+/* These two element styles set the "body" height to 100vh, and footer at the bottom */
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h4, h5 {
+  margin-top: 13.68px;
+}
+
+#info {
+  display: grid;
+  grid-column-gap: 2rem;
+  padding: 1rem 0 1rem 0;
+}
+
+#info > div, h4, p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#info > p {
+  font-size: 125%;
+}
+
+#gallery {
+  display: grid;
+  margin: 2rem 0 2rem 0;
+  grid-column-gap: 0.6rem;
+}
+
+@media (min-width: 100px){
+  #info {
+    grid-template-columns: 1fr;
+  }
+  #gallery {
+      grid-template-columns: 1fr 1fr;
+  }
+  #a {
+    order: 2;
+  }
+  #c {
+    order: 3;
+  }
+}
+
+@media (min-width: 600px){
+  #info {
+    grid-template-columns: 1fr;
+  }
+  #gallery {
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px){
+  #info {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #gallery {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  #a {
+    order: 3;
+  }
+}
+
+@media (min-width: 1200px){
+  #gallery {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.click-item {
+  margin: 0.6rem;
+  border: 5px solid #f1f1f1;
+  border-radius: 7%;
+  box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#gallery > .click-item:hover {
+  transform: scale(1.15);
+}
+
+.page-footer {
+  padding: 0;
+}
+
+.page-footer, .footer-copyright {
+  background-color: white !important;
+  color: grey !important;
+}
+
+.footer-copyright > .container > a {
+  font-size: 1.25rem;
+  transition: 0.3s;
+}
+
+.footer-copyright > .container > a:hover {
+  transform: scale(1.3);
+}
